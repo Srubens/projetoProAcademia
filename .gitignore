@@ -1,0 +1,4 @@
+node_modules
+projetoclientes.json
+.next
+.env.local

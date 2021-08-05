@@ -1,0 +1,68 @@
+h3{
+    color:#fff;
+}
+
+a{
+    text-decoration: none;
+    color:#000;
+}
+
+.main_index{
+    height: 671px;
+    background: #000;
+    color:#fff;
+}
+
+.box_two{
+    margin:200px 200px;
+    width: 320px;
+    max-width: 100%;
+}
+
+.btn_yellow{
+    padding: 18px;
+    background: rgb(251, 255, 32);
+    border-radius: 4px;
+    text-transform: uppercase;
+    color:#000;
+}
+
+.btn_yellow:hover{
+    color:#000;
+    background: rgb(255 236 101);
+    padding: 18px;
+}
+
+.main_img{
+    max-width: 100%;
+    margin:25px 200px;
+}
+
+/**
+CADASTRO
+*/
+
+.main_cadastro{
+    height: 671px;
+}
+
+@media(max-width:576px){
+    .main_index{
+        height: 710px;
+    }
+
+    .main_img{
+        max-width: 100%;
+        margin:10px 25px;
+        margin-bottom: 15px;
+        width: 300px;
+    }
+
+    .box_two{
+        margin:0 auto;
+        width: 320px;
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+
+}
