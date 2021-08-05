@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../Header'
 import Footer from '../Footer'
 
-export const Layout = ({children}) =>{
+const Layout = ({children}) =>{
     return (
         <React.Fragment>
             <Header/>
@@ -13,3 +13,5 @@ export const Layout = ({children}) =>{
         </React.Fragment>  
     )
 }
+
+export default Layout

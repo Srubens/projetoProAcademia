@@ -8,9 +8,7 @@
     "build": "next build",
     "start": "next start"
   },
-  "keywords": [
-    "stylofitnessacademia"
-  ],
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
