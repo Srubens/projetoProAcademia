@@ -8,7 +8,7 @@ const Header = () =>{
             <div className="container">
                 <div className="d-flex justify-content-center align-items-center">
                     <Link href="/" >
-                        <a>Stylo Fitnes Academia
+                        <a className="main_logo" >Stylo Fitnes Academia
                             {/* <img className="main_logo" alt="logo" /> */}
                         </a>
                     </Link>

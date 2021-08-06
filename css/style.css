@@ -13,6 +13,10 @@ a{
     color:#fff;
 }
 
+.main_logo{
+    font-size: 26px;
+}
+
 .box_two{
     margin:200px 200px;
     width: 320px;
@@ -44,6 +48,11 @@ CADASTRO
 
 .main_cadastro{
     height: 671px;
+}
+
+.main_cadastro p{
+    margin:180px auto;
+    font-size: 28px;
 }
 
 @media(max-width:576px){

@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
+import Swal from 'sweetalert2/dist/sweetalert2'
+import '../node_modules/sweetalert2/dist/sweetalert2.min.css'
 
 const Cadastro = () =>{
 
@@ -14,8 +16,41 @@ const Cadastro = () =>{
     const [success, setSuccess] = useState(false)
     const [retorno, setRetorno] = useState({})
 
+    const nome = form.nome
+    const email = form.email
+    const telefone = form.telefone
+
     const save = async() =>{
         try{
+
+            if(!nome && nome === ''){
+                console.log('Erro')
+                Swal.fire({
+                    icon:'error',
+                    title:'Erro ao cadastrar',
+                    html:`Para cadastrar preencha todos os campos!`
+                })
+                return false;
+            }
+            if(!email && email === ''){
+                console.log('Erro')
+                Swal.fire({
+                    icon:'error',
+                    title:'Erro ao cadastrar',
+                    html:`Para cadastrar preencha todos os campos!`
+                })
+                return false;
+            }
+            if(!telefone && telefone === ''){
+                console.log('Erro')
+                Swal.fire({
+                    icon:'error',
+                    title:'Erro ao cadastrar',
+                    html:`Para cadastrar preencha todos os campos!`
+                })
+                return false;
+            }
+
             const response = await fetch('/api/save',{
                 method:'POST',
                 body:JSON.stringify(form)
@@ -79,7 +114,7 @@ const Cadastro = () =>{
                                 <button type="button" onClick={save} className="btn_yellow col-12 col-md-12" >Cadastrar</button>
                             </div>
                         </div> 
-                        {JSON.stringify(form, null, 2)} 
+                         
                     </div>
                 </div>
                 }
@@ -87,9 +122,12 @@ const Cadastro = () =>{
                 {
                     retorno.Nome &&
                     <div className="main_cadastro">
-                        <p>
-                        {JSON.stringify(retorno)}
-                        </p>
+                        <div className="container">
+                        <div className="d-flex algin-items-center">
+                            <p>{`Olá ${JSON.stringify(retorno.Nome).replace(/["]/gm,'')} você foi cadastrado!`} <br/>
+                            Entraremos em contato em breve.</p>
+                        </div>
+                        </div>
                     </div>
                 }
                 
