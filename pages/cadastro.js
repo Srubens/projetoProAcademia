@@ -123,10 +123,18 @@ const Cadastro = () =>{
                     retorno.Nome &&
                     <div className="main_cadastro">
                         <div className="container">
-                        <div className="d-flex algin-items-center">
-                            <p>{`Olá ${JSON.stringify(retorno.Nome).replace(/["]/gm,'')} você foi cadastrado!`} <br/>
-                            Entraremos em contato em breve.</p>
-                        </div>
+                            <div className="d-flex algin-items-center flex-column">
+                                <p>{`Olá ${JSON.stringify(retorno.Nome).replace(/["]/gm,'')} você foi cadastrado!`} <br/>
+                                Entraremos em contato em breve.</p>
+                                <div className="col-12 col-md-4 mt-4 mb-4 m-auto">
+                                <div className="d-flex align-items-center justify-content-center text-center">
+
+                                    <Link href="/">
+                                        <a className="btn_yellow col-12 col-md-12" >Voltar para o início</a>
+                                    </Link>
+                                </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 }
